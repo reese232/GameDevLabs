@@ -17,10 +17,12 @@ public class JumpOverGoomba : MonoBehaviour
     public float maxDistance;
     public LayerMask layerMask;
 
+    GameManager gameManager;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+        gameManager = GameObject.FindGameObjectWithTag("Manager").GetComponent<GameManager>();
     }
 
     // Update is called once per frame
@@ -44,9 +46,10 @@ public class JumpOverGoomba : MonoBehaviour
             if (Mathf.Abs(transform.position.x - enemyLocation.position.x) < 0.5f)
             {
                 countScoreState = false;
-                score++;
-                scoreText.text = "Score: " + score.ToString();
-                Debug.Log(score);
+                gameManager.IncreaseScore(1);
+                //score++;
+                //scoreText.text = "Score: " + score.ToString();
+                //Debug.Log(score);
             }
         }
     }

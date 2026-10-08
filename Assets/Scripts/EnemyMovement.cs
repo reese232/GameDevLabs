@@ -13,6 +13,15 @@ public class EnemyMovement : MonoBehaviour
     // for reset button
     public Vector3 startPosition = new Vector3(0.0f, 0.0f, 0.0f);
 
+    // for animation
+    public Animator goombaAnimator;
+    public AudioSource goombaStompAudio;
+    public Collider2D goombaCollider;
+    public StompGoomba stompGoomba;
+
+    [System.NonSerialized]
+    public bool alive = true;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -29,6 +38,8 @@ public class EnemyMovement : MonoBehaviour
 
     void MoveGoomba()
     {
+        Vector2 temp = enemyBody.position + velocity * Time.fixedDeltaTime;
+        Debug.Log("MoveGoomba called! " + temp);
         enemyBody.MovePosition(enemyBody.position + velocity * Time.fixedDeltaTime);
     }
 
@@ -53,22 +64,49 @@ public class EnemyMovement : MonoBehaviour
     // Version B: FixedUpdate
     private void FixedUpdate()
     {
-        if (Mathf.Abs(enemyBody.position.x - originalX) < maxOffset)
+        if (alive)
         {
-            // move goomba
-            MoveGoomba();
-        }
-        else
-        {
-            // change direction
-            moveRight *= -1;
-            ComputeVelocity();
-            MoveGoomba();
-        }
+            if (Mathf.Abs(enemyBody.position.x - originalX) < maxOffset)
+            {
+                // move goomba
+                MoveGoomba();
+            }
+            else
+            {
+                // change direction
+                moveRight *= -1;
+                ComputeVelocity();
+                MoveGoomba();
+            }
+    }
+}
+
+    public void StompGoomba()
+    {
+        goombaAnimator.Play("goomba-stomp");
+        goombaCollider.enabled = false;
+        alive = false;
+    }
+
+    public void PlayStompSound()
+    {
+        goombaStompAudio.PlayOneShot(goombaStompAudio.clip);
     }
 
     void OnTriggerEnter2D(Collider2D other)
     {
         Debug.Log(other.gameObject.name);
+    }
+
+    public void GameRestart()
+    {
+        goombaCollider.enabled = true;
+        transform.localPosition = startPosition;
+        originalX = transform.position.x;
+        moveRight = -1;
+        ComputeVelocity();
+        goombaAnimator.SetTrigger("gameRestart");
+        stompGoomba.GameRestart();
+        alive = true;
     }
 }
