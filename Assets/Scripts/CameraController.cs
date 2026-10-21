@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class CameraController : MonoBehaviour
 {
-    public Transform player; // Mario's Transform
+    private Transform player; // Mario's Transform, used to be public
     public Transform endLimit; // GameObject that indicates end of map
     private float offset; // inital x-offset between camera and Mario
     private float startX; // smallest x-coordinate of the camera
@@ -13,6 +13,8 @@ public class CameraController : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        player = GameObject.FindGameObjectWithTag("Player").transform;
+
         // get coordinate of the bottomleft of the viewport
         // z doesn't matter since the camera is orthographic
         Vector3 bottomLeft = Camera.main.ViewportToWorldPoint(new Vector3(0, 0, 0)); // the z-component is the distance of the resulting plane from the camera 

@@ -3,6 +3,7 @@ using UnityEngine.Events;
 using UnityEngine.InputSystem;
 
 public class ActionManager : MonoBehaviour
+//public class ActionManager : Singleton<ActionManager>
 {
     public UnityEvent jump;
     public UnityEvent jumpHold;

@@ -394,8 +394,8 @@ TextureImporter:
         y: 343
         width: 16
         height: 8
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -659,7 +659,7 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -668,6 +668,380 @@ TextureImporter:
       bones: []
       spriteID: 1859c31dbcb24814b94e73d39c14a1cf
       internalID: 2038984152
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pipe_side_green
+      rect:
+        serializedVersion: 2
+        x: 573
+        y: 1118
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c8d68ccf27c8c9346875b5c188dda7da
+      internalID: -757326248
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wall_blue
+      rect:
+        serializedVersion: 2
+        x: 393
+        y: 1133
+        width: 16
+        height: 17
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b6241e661d4a4474da3711e60209c5cd
+      internalID: -1980439633
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brick_blue
+      rect:
+        serializedVersion: 2
+        x: 393
+        y: 1189
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d352742b18e1dac4c9bae06dfcbe5d34
+      internalID: -1789310821
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: marble_blue
+      rect:
+        serializedVersion: 2
+        x: 393
+        y: 1094
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a12e3bf02ab71942a6f8caa055af0c0
+      internalID: -1238864439
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: questionblock_blue_1
+      rect:
+        serializedVersion: 2
+        x: 372
+        y: 1057
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1902b20a01c4bad4d82f819f96e076ad
+      internalID: 327582845
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: questionblock_blue_2
+      rect:
+        serializedVersion: 2
+        x: 390
+        y: 1057
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 047e00a6ac85e274888a5d54169c024c
+      internalID: 1728871267
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: questionblock_blue_3
+      rect:
+        serializedVersion: 2
+        x: 408
+        y: 1057
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 51f1cdf4ac422ce42a85a0d750b9b7af
+      internalID: -1303536100
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: goomba_blue_left
+      rect:
+        serializedVersion: 2
+        x: 253
+        y: 342
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cdbece98da49af64590d2363956edf10
+      internalID: 1831319009
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: goomba_blue_right
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 342
+        width: 17
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce755920daecd6b469d4834628d9c7a1
+      internalID: -1601506675
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: goomba_blue_squished
+      rect:
+        serializedVersion: 2
+        x: 291
+        y: 342
+        width: 16
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 649ad9e29365c724481b44369c7990b1
+      internalID: -740601270
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ground_blue
+      rect:
+        serializedVersion: 2
+        x: 393
+        y: 1112
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 09beb64f9680a3e4bb8b4daf1bcce615
+      internalID: 1273484023
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pipe_side_connector_green
+      rect:
+        serializedVersion: 2
+        x: 610
+        y: 1118
+        width: 35
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f82a5c4ee5ce4e4682f52441369a4b5
+      internalID: 1391282587
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: castle_small_right
+      rect:
+        serializedVersion: 2
+        x: 312
+        y: 954
+        width: 40
+        height: 80
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a070b550d3a976f47bd9f9c2d247a251
+      internalID: 1757460889
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: castle_small_left
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 954
+        width: 40
+        height: 80
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eea1e08befb0ed04aa3667dbe967b219
+      internalID: -2108431004
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: starman_1
+      rect:
+        serializedVersion: 2
+        x: 53
+        y: 1133
+        width: 14
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e328aaedb40549479adb227d242b906
+      internalID: 250614910
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: starman_2
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 1133
+        width: 14
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6354c1b354e95a94ea8cc9abe540da83
+      internalID: -1434638461
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: starman_3
+      rect:
+        serializedVersion: 2
+        x: 91
+        y: 1133
+        width: 14
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5595fbbfb4772ca44a3a87737ccd95d3
+      internalID: 1498500153
       vertices: []
       indices: 
       edges: []
@@ -694,23 +1068,41 @@ TextureImporter:
       3_shrubs: 590806767
       big_hill: 1619707731
       brick: 1376628275
+      brick_blue: -1789310821
       brown_goomba_left: 2113008727
       brown_goomba_right: 1324955502
       brown_goomba_squished: -1835255546
+      castle_small_left: -2108431004
+      castle_small_right: 1757460889
       coin_1: -1080751235
       coin_2: -1591029209
       coin_3: -1333820200
       coin_4: 253713935
+      goomba_blue_left: 1831319009
+      goomba_blue_right: -1601506675
+      goomba_blue_squished: -740601270
+      ground_blue: 1273484023
       ground_brown: -1137820508
       magic_mushroom: -1885146887
+      marble_blue: -1238864439
       moving_platform_6: 1123257370
+      pipe-side: -1108972654
       pipe_body_green: 171867582
       pipe_head_green: -599694951
+      pipe_side_connector_green: 1391282587
+      pipe_side_green: -757326248
       question_block_1: 1663410327
       question_block_2: 29999573
       question_block_3: 1515216280
       question_box_disabled: 2038984152
+      questionblock_blue_1: 327582845
+      questionblock_blue_2: 1728871267
+      questionblock_blue_3: -1303536100
       small_hill: 535300467
+      starman_1: 250614910
+      starman_2: -1434638461
+      starman_3: 1498500153
+      wall_blue: -1980439633
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

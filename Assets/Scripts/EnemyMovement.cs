@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 public class EnemyMovement : MonoBehaviour
@@ -18,9 +19,15 @@ public class EnemyMovement : MonoBehaviour
     public AudioSource goombaStompAudio;
     public Collider2D goombaCollider;
     public StompGoomba stompGoomba;
+    public Sprite flatSprite;
 
     [System.NonSerialized]
     public bool alive = true;
+
+    void Awake()
+    {
+        GameManager.instance.gameRestart.AddListener(GameRestart);
+    }
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -39,26 +46,13 @@ public class EnemyMovement : MonoBehaviour
     void MoveGoomba()
     {
         Vector2 temp = enemyBody.position + velocity * Time.fixedDeltaTime;
-        Debug.Log("MoveGoomba called! " + temp);
+        //Debug.Log("MoveGoomba called! " + temp);
         enemyBody.MovePosition(enemyBody.position + velocity * Time.fixedDeltaTime);
     }
 
     // Update is called once per frame
     void Update()
     {
-        //// Version A: Update
-        //if (Mathf.Abs(enemyBody.position.x - originalX) < maxOffset)
-        //{
-        //    // move goomba
-        //    MoveGoomba();
-        //}
-        //else
-        //{
-        //    // change direction
-        //    moveRight *= -1;
-        //    ComputeVelocity();
-        //    MoveGoomba();
-        //}
     }
 
     // Version B: FixedUpdate
@@ -78,14 +72,20 @@ public class EnemyMovement : MonoBehaviour
                 ComputeVelocity();
                 MoveGoomba();
             }
+        }
     }
-}
+
 
     public void StompGoomba()
     {
-        goombaAnimator.Play("goomba-stomp");
         goombaCollider.enabled = false;
+        goombaAnimator.Play("goomba-stomp");
         alive = false;
+    }
+
+    public void HideAfterStomp()
+    {
+        gameObject.SetActive(false);
     }
 
     public void PlayStompSound()
@@ -93,13 +93,38 @@ public class EnemyMovement : MonoBehaviour
         goombaStompAudio.PlayOneShot(goombaStompAudio.clip);
     }
 
+    //public void OnCollisionEnter2D(Collision2D collision)
+    //{
+    //    if (collision.gameObject.CompareTag("Player"))
+    //    {
+    //        if (CheckDirection(collision.transform, transform, Vector2.down))
+    //        {
+    //            StompGoomba();
+    //        }
+    //    }
+    //}
+
+    bool CheckDirection(Transform transform, Transform other, Vector2 testDirection)
+    {
+        Vector2 direction = other.position - transform.position;
+        return Vector2.Dot(direction.normalized, testDirection) > 0.25f;
+    }
+
     void OnTriggerEnter2D(Collider2D other)
     {
         Debug.Log(other.gameObject.name);
+        //if (other.gameObject.CompareTag("Player"))
+        //{
+        //    if (CheckDirection(other.transform, transform, Vector2.down))
+        //    {
+        //        StompGoomba();
+        //    } 
+        //}
     }
 
     public void GameRestart()
     {
+        gameObject.SetActive(true);
         goombaCollider.enabled = true;
         transform.localPosition = startPosition;
         originalX = transform.position.x;

@@ -28,7 +28,7 @@ public class QuestionBoxBehaviour : MonoBehaviour
         {
             coin.CoinAppear();
             isUsed = true;
-            boxAnimator.SetBool("isCollected", true);
+            boxAnimator.SetBool("spawned", true);
         }
     }
 

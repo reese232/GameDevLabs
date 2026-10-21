@@ -2,6 +2,10 @@ using UnityEngine;
 
 public class EnemyManager : MonoBehaviour
 {
+    void Awake()
+    {
+        GameManager.instance.gameRestart.AddListener(GameRestart);
+    }
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {

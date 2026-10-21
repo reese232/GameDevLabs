@@ -3,8 +3,8 @@ using UnityEngine;
 public class BrickCoin : MonoBehaviour
 {
     public Animator brickAnimator;
-    public CoinBehaviour coin;
-    bool isCoinCollected = false;
+    //public CoinBehaviour coin;
+    //bool isCoinCollected = false;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -18,14 +18,15 @@ public class BrickCoin : MonoBehaviour
 
     }
 
-    void OnTriggerEnter2D(Collider2D col)
+    void OnCollisionEnter2D(Collision2D col)
     {
-        brickAnimator.SetTrigger("onHit");
+        //brickAnimator.SetTrigger("bounce");
+        this.GetComponent<Animator>().SetTrigger("bounce");
 
-        if (!isCoinCollected)
-        {
-            coin.CoinAppear();
-            isCoinCollected = true;
-        }
+        //if (!isCoinCollected)
+        //{
+        //    coin.CoinAppear();
+        //    isCoinCollected = true;
+        //}
     }
 }
